@@ -1,7 +1,7 @@
 // Service worker mínimo: Chrome lo pide para poder instalar la app.
 // Guarda solo esta página y los íconos; los datos siempre vienen en vivo de Apps Script.
-const CACHE = 'equipos-v1';
-const ARCHIVOS = ['./', 'index.html', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-180.png'];
+const CACHE = 'equipos-v2';
+const ARCHIVOS = ['./', 'index.html', 'manifest.json', 'icons/icon-192.png', 'icons/icon-512.png', 'icons/icon-180.png', 'icons/icon-maskable-512.png'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARCHIVOS)));
